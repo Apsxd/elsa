@@ -130,8 +130,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             update.effective_message.reply_photo(
                 TECHNO_IMG,
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
-                       [
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([
                         [
                             InlineKeyboardButton(
                                 text="☑️ Add me",
@@ -169,6 +168,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                     ],
                 ),
             )
+                       
     else:
         update.effective_message.reply_text("Yuss, I am Already ONline")
 
