@@ -31,7 +31,7 @@ This is the most complete Bot to help you manage your groups easily and safely!
  
 👉🏻 Add me in a Supergroup and promote me as Admin to set me get in action!
  
-❓ WHAT ARE THE COMMANDS? ❓
+❓ WHAT ARE THE COMMANDS❓
 Press /help to see all the commands and how they work!
 
 """
@@ -40,7 +40,7 @@ HELP_STRINGS = """
 Welcome to the help menu!
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-TECHNO_IMG = "https://telegra.ph/file/84b2017bc2f3c90f2e61c.jpg"
+TECHNO_IMG = "https://telegra.ph/file/7d11e6d10de3a9cd7825c.jpg"
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
