@@ -130,45 +130,15 @@ def start(bot: Bot, update: Update, args: List[str]):
             update.effective_message.reply_photo(
                 TECHNO_IMG,
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([
-                        [
-                            InlineKeyboardButton(
-                                text="☑️ Add me",
-                                url="t.me/{}?startgroup=true".format(
-                                    context.bot.username,
-                                ),
-                            ),
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text="🚑 Support",
-                                url=f"https://t.me/{SUPPORT_CHAT}",
-                            ),
-                            InlineKeyboardButton(
-                                text="🔔 Updates",
-                                url="https://t.me/OnePunchUpdates",
-                            ),
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text="🧾 Getting Started",
-                                url="https://t.me/OnePunchUpdates/29",
-                            ),
-                            InlineKeyboardButton(
-                                text="🗄 Source code",
-                                url="https://github.com/AnimeKaizoku/SaitamaRobot",
-                            ),
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text="☠️ Kaizoku Network",
-                                url="https://t.me/Kaizoku/4",
-                            ),
-                        ],
-                    ],
-                ),
-            )
-                       
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="HELP",
+                                                                       callback_data="help_back".format(bot.username)),
+                                                                                   InlineKeyboardButton(text="SUPPORT",
+                                                                       url="t.me/tubots")],
+                                                                                   [InlineKeyboardButton(text="ADD TO GROUP",
+                                                                       url="t.me/{}?startgroup=true".format(bot.username)),
+                                                                                   InlineKeyboardButton(text="SOURCE CODE",
+                                                                       url="https://github.com/Basi-mon/Nimmi-Robot")
+                                                                                 ]]))
     else:
         update.effective_message.reply_text("Yuss, I am Already ONline")
 
