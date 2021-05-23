@@ -26,27 +26,18 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 
 PM_START_TEXT = """
-**Hello {}, My Name is {}!** 
-I am an **SUPERB**  group management bot.
-You can find the list of available commands with /help.
+**Hello {},
+This is the most complete Bot to help you manage your groups easily and safely! 
+ 
+👉🏻 Add me in a Supergroup and promote me as Admin to set me get in action!
+ 
+❓ WHAT ARE THE COMMANDS? ❓
+Press /help to see all the commands and how they work!
 
 """
 
 HELP_STRINGS = """
-
-Hello! my name *{}*.
-
-*Main* commands available:
- - /start: start the bot
- - /help: PM's you this message.
- - /help <module name>: PM's you info about that module.
- - /settings:
-   - in PM: will send you your settings for all supported modules.
-   - in a group: will redirect you to pm, with all that chat's settings.
-
-
-{}
-And the following:
+Welcome to the help menu!
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
 TECHNO_IMG = "https://telegra.ph/file/84b2017bc2f3c90f2e61c.jpg"
@@ -206,21 +197,21 @@ def help_button(bot: Bot, update: Update):
             query.message.reply_text(text=text,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton(text="Back", callback_data="help_back")]]))
+                                         [[InlineKeyboardButton(text="BACK", callback_data="help_back")]]))
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
             query.message.reply_text(HELP_STRINGS,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
-                                         paginate_modules(curr_page - 1, HELPABLE, "help")))
+                                         paginate_modules(curr_page - 1, HELPABLE, "HELP")))
 
         elif next_match:
             next_page = int(next_match.group(1))
             query.message.reply_text(HELP_STRINGS,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
-                                         paginate_modules(next_page + 1, HELPABLE, "help")))
+                                         paginate_modules(next_page + 1, HELPABLE, "HELP")))
 
         elif back_match:
             query.message.reply_text(text=HELP_STRINGS,
