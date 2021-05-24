@@ -4,7 +4,7 @@ import re
 from sys import argv
 from typing import Optional
 
-from Nimmirobot import (
+from tg_bot import (
     ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
@@ -24,9 +24,9 @@ from Nimmirobot import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from Nimmirobot.modules import ALL_MODULES
-from Nimmirobot.modules.helper_funcs.chat_status import is_user_admin
-from Nimmirobot.modules.helper_funcs.misc import paginate_modules
+from tg_bot.modules import ALL_MODULES
+from tg_bot.modules.helper_funcs.chat_status import is_user_admin
+from tg_bot.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
