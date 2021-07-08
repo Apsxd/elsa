@@ -52,7 +52,7 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
              in module_dict.values()])
 
     pairs = [
-    modules[i * 3:(i + 1) * 3] for i in range((len(modules) + 3 - 1) // 3)
+    modules[i * 4:(i + 1) * 4] for i in range((len(modules) + 4 - 1) // 4)
     ]
 
     round_num = len(modules) / 3
@@ -68,9 +68,7 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
     # can only have a certain amount of buttons side by side
     if len(pairs) > 7:
         pairs = pairs[modulo_page * 8:8 * (modulo_page + 1)] + [
-            (EqInlineKeyboardButton("SUPPORT", url="https://t.me/unitedbotsupport",
-                EqInlineKeyboardButton("CLOSE", callback_data="bot_start"),
-             EqInlineKeyboardButton("WEBSITE", url="https://zyruzramu.wixsite.com/teamunited"]
+            ([EqInlineKeyboardButton("「 GO BACK TO MAIN MENU 」", callback_data="bot_start")]]
 
     else:
         pairs += [[EqInlineKeyboardButton("Home", callback_data="bot_start")]]
