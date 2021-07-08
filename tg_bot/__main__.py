@@ -40,7 +40,7 @@ HELP_STRINGS = """
 Welcome to the help menu!
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-TECHNO_IMG = "https://telegra.ph/file/7d11e6d10de3a9cd7825c.jpg"
+TECHNO_IMG = "https://telegra.ph/file/5a38abf61bc52ebe19919.jpg"
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
