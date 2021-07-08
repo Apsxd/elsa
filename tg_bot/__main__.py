@@ -140,7 +140,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                                                                        url="https://github.com/Basi-mon/Nimmi-Robot")
                                                                                  ]]))
     else:
-        update.effective_message.reply_text("Yuss, I am Already ONline")
+        update.effective_message.reply_text("Online now")
 
 
 def send_start(bot, update):
