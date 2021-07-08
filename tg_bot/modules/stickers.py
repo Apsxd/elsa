@@ -229,12 +229,13 @@ def makepack_internal(msg, user, png_sticker, emoji, bot, packname, packnum):
 
 
 __help__ = """
+- /info : to get info 
 - /stickerid: reply to a sticker to get its ID.
 - /getsticker: reply to a sticker to get the raw PNG image.
 - /kang: reply to a sticker or image to add it to your pack.
 """
 
-__mod_name__ = "STICKER"
+__mod_name__ = "Misc"
 STICKERID_HANDLER = DisableAbleCommandHandler("stickerid", stickerid)
 GETSTICKER_HANDLER = DisableAbleCommandHandler("getsticker", getsticker)
 KANG_HANDLER = DisableAbleCommandHandler("kang", kang, pass_args=True, admin_ok=False)
