@@ -1,3 +1,5 @@
+from typing import List, Dict
+
 from math import ceil
 from telegram import MAX_MESSAGE_LENGTH, InlineKeyboardButton, Bot, ParseMode, Update
 from telegram.error import TelegramError
@@ -122,4 +124,6 @@ def sendMessage(text: str, bot: Bot, update: Update):
     return bot.send_message(
         update.message.chat_id,
         reply_to_message_id=update.message.message_id,
-        
+        text=text,
+        parse_mode=ParseMode.HTML,
+    )
