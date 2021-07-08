@@ -68,8 +68,9 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
     # can only have a certain amount of buttons side by side
     if len(pairs) > 7:
         pairs = pairs[modulo_page * 8:8 * (modulo_page + 1)] + [
-            ([EqInlineKeyboardButton("「 GO BACK TO MAIN MENU 」", callback_data="bot_start")]]
-
+            (EqInlineKeyboardButton("SUPPORT", url="https://t.me/unitedbotsupport",
+                EqInlineKeyboardButton("CLOSE", callback_data="bot_start"),
+             EqInlineKeyboardButton("WEBSITE", url="https://zyruzramu.wixsite.com/teamunited"]
     else:
         pairs += [[EqInlineKeyboardButton("Home", callback_data="bot_start")]]
 
