@@ -87,7 +87,7 @@ if ENV:
     AI_API_KEY = os.environ.get("AI_API_KEY", None)
     WALL_API = os.environ.get("WALL_API", None)
     LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY", None)
-    spamwatch_api = os.environ.get("sw_api", None)
+    spamwatch_api = os.environ.get("sw_api", "mdw_NNM2UvqAPFnxR2FfXaFa0FZMv3C1iraEL8YmclZ9GMn7R4X5C8D4D_d3ZEdY")
     INFOPIC = bool(os.environ.get('INFOPIC', False))
 
 else:
