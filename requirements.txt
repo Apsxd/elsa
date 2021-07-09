@@ -21,12 +21,9 @@ coffeehouse
 spamwatch
 telethon
 wikipedia
-pyrogram
 TgCrypto
 py-tgcalls
 python-dotenv
-youtube_dl
-youtube_search_python
 requests
 asyncio
 youtube_search
