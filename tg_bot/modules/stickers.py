@@ -229,10 +229,26 @@ def makepack_internal(msg, user, png_sticker, emoji, bot, packname, packnum):
 
 
 __help__ = """
+**Media**
+- /song to download song from spotify [syntax] ~ /song {song name} 
+- /video to download video from youtube [syntax] ~ /video {yt link} or {vid name} 
+
+**Infos**
 - /info : to get info 
+- /setbio <text>: while replying, will save another user's bio
+- /bio: will get your or another user's bio. This cannot be set by yourself.
+- /setme <text>: will set your info
+- /me: will get your or another user's info
+
+**Stickers**
 - /stickerid: reply to a sticker to get its ID.
 - /getsticker: reply to a sticker to get the raw PNG image.
 - /kang: reply to a sticker or image to add it to your pack.
+
+**Translate**
+- /tr {language code} as reply to a long message.
+
+**More modules are coming soon** stay tuned with @tubots
 """
 
 __mod_name__ = "Misc"
