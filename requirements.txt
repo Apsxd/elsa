@@ -21,7 +21,6 @@ coffeehouse
 spamwatch
 telethon
 wikipedia
-TgCrypto
 py-tgcalls
 python-dotenv
 requests
