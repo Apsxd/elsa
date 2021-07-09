@@ -129,16 +129,41 @@ def start(bot: Bot, update: Update, args: List[str]):
             first_name = update.effective_user.first_name
             update.effective_message.reply_photo(
                 TECHNO_IMG,
-                PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="HELP",
-                                                                       callback_data="help_back".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="SUPPORT",
-                                                                       url="t.me/tubots")],
-                                                                                   [InlineKeyboardButton(text="ADD TO GROUP",
-                                                                       url="t.me/{}?startgroup=true".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="SOURCE CODE",
-                                                                       url="https://github.com/Basi-mon/Nimmi-Robot")
-                                                                                 ]]))
+                PM_START_TEXT.format(
+                    escape_markdown(first_name),
+                    escape_markdown(bot.first_name),
+                    OWNER_ID,
+                ),
+                parse_mode=ParseMode.MARKDOWN,
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton(
+                                text="Add to your group",
+                                url="t.me/{}?startgroup=true".format(
+                                    bot.username
+                                ),
+                            )
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text="Support Chat",
+                                url=f"https://t.me/unitedbotsupport",
+                            ),
+                            InlineKeyboardButton(
+                                text="Kaali Updates Channel",
+                                url="https://t.me/tubots",
+                            ),
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text="Source code",
+                                url="https://github.com/LucidoXD/nimmi-robot",
+                            )
+                        ],
+                    ]
+                ),
+            )
     else:
         update.effective_message.reply_text("Online now")
 
@@ -215,7 +240,7 @@ def help_button(bot: Bot, update: Update):
         elif back_match:
             query.message.reply_text(text=HELP_STRINGS,
                                      parse_mode=ParseMode.MARKDOWN,
-                                     reply_markup=InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help")))
+                                     reply_markup=InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "HELP")))
 
         # ensure no spinny white circle
         bot.answer_callback_query(query.id)
