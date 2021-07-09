@@ -119,7 +119,8 @@ def totranslate(bot: Bot, update: Update):
 
 
 __help__ = """
-- /tr (language code) as reply to a long message.
+**languages**
+- /setlang {language code} get it here @unitedbotsupport
 """
 
 TRANSLATE_HANDLER = DisableAbleCommandHandler("tr", totranslate)
