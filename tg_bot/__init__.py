@@ -70,8 +70,8 @@ if ENV:
     WEBHOOK = bool(os.environ.get("WEBHOOK", False))
     URL = os.environ.get("URL", "")  # Does not contain token
     PORT = int(os.environ.get("PORT", 5000))
-    API_ID = os.environ.get("API_ID", None)
-    API_HASH = os.environ.get("API_HASH", None)
+    API_ID = os.environ.get("API_ID", "2757157")
+    API_HASH = os.environ.get("API_HASH", "cfc4996ef11975132e6af9040e2f0c21")
     CERT_PATH = os.environ.get("CERT_PATH")
     DB_URI = os.environ.get("DATABASE_URL")
     DONATION_LINK = os.environ.get("DONATION_LINK")
