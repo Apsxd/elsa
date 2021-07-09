@@ -25,3 +25,5 @@ wikipedia
 pyowm
 tabulate
 parsel
+pyrogram
+
