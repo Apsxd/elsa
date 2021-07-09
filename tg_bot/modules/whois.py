@@ -102,7 +102,7 @@ def whois(bot: Bot, update: Update, args: List[str]):
     if user.username:
         text += f"\n「USERNAME」: @{html.escape(user.username)}"
 
-    text += f"\n「MENTION」: {mention_html(user.id, '「LINK」')}"
+    text += f"\n「MENTION」: {mention_html(user.id, 'LINK')}"
 
     num_chats = sql.get_user_num_chats(user.id)
     text += f"\n「CHATS」: <code>{num_chats}</code>"
@@ -211,7 +211,7 @@ dispatcher.add_handler(WHOIS_HANDLER)')}"
     result = cas.banchecker(user.id)
     text += str(result)
     for mod in USER_INFO:
-        if mod.__mod_name__ == "WHOIS":
+        if mod.__mod_name__ == "info":
             continue
 
         try:
