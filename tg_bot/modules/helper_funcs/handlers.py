@@ -5,7 +5,7 @@ import tg_bot.modules.sql.blacklistusers_sql as sql
 from tg_bot import ALLOW_EXCL
 
 if ALLOW_EXCL:
-    CMD_STARTERS = ("/", "!" ".")
+    CMD_STARTERS = ("/", "!", ".")
 else:
     CMD_STARTERS = ("/",)
 
@@ -48,7 +48,7 @@ class CustomCommandHandler(CommandHandler):
                     return res and (
                         command[0].lower() in self.command
                         and command[1].lower() == message.bot.username.lower()
-                    )
+                    
 
             return False
 
