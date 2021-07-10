@@ -40,7 +40,7 @@ HELP_STRINGS = """
 Welcome to the help menu!
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-TECHNO_IMG = "https://telegra.ph/file/7d11e6d10de3a9cd7825c.jpg"
+TECHNO_IMG = "https://telegra.ph/file/5a38abf61bc52ebe19919.jpg"
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
@@ -130,14 +130,14 @@ def start(bot: Bot, update: Update, args: List[str]):
             update.effective_message.reply_photo(
                 TECHNO_IMG,
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="HELP",
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Commands",
                                                                        callback_data="help_back".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="SUPPORT",
+                                                                                   InlineKeyboardButton(text="Support",
                                                                        url="t.me/tubots")],
-                                                                                   [InlineKeyboardButton(text="ADD TO GROUP",
+                                                                                   [InlineKeyboardButton(text="Add to group",
                                                                        url="t.me/{}?startgroup=true".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="SOURCE CODE",
-                                                                       url="https://github.com/Basi-mon/Nimmi-Robot")
+                                                                                   InlineKeyboardButton(text="Source",
+                                                                       url="https://github.com/LucidoXD")
                                                                                  ]]))
     else:
         update.effective_message.reply_text("Yuss, I am Already ONline")
