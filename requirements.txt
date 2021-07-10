@@ -26,4 +26,4 @@ pyowm
 tabulate
 parsel
 pyrogram
-
+TgCrypto
