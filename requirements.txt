@@ -25,7 +25,6 @@ wikipedia
 pyowm
 tabulate
 parsel
-TgCrypto
 pytube
 sqlalchemy==1.3.23
 psycopg2
