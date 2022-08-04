@@ -2,6 +2,7 @@ future
 emoji
 beautifulsoup4
 requests
+sqlalchemy==1.3.23
 python-telegram-bot==11.1.0
 psycopg2-binary
 feedparser
@@ -11,6 +12,7 @@ zalgo-text
 geopy
 nltk
 psutil
+aiohttp>=2.2.5
 Pillow>=4.2.0
 CurrencyConverter
 googletrans
@@ -23,19 +25,3 @@ wikipedia
 pyowm
 tabulate
 parsel
-pytube
-sqlalchemy==1.3.23
-psycopg2
-youtube-search-python
-Pyrogram==1.2.9
-TgCrypto==1.2.2
-ffmpeg-python
-psutil
-pytgcalls
-wheel
-python-arq
-aiohttp==3.6.2
-youtube_dl
-youtube_search_python
-youtube_search
-wget
